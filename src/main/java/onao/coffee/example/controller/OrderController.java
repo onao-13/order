@@ -16,7 +16,7 @@ public class OrderController {
     @Autowired
     OrderService orderService;
 
-    @GetMapping("/get/{id}")
+    @GetMapping("/{id}/get")
     ResponseEntity<Order> getById(@PathVariable("id") long id) {
         return orderService.getById(id).map(ResponseEntity::ok)
                 .orElseGet(() -> ResponseEntity.notFound().build());
