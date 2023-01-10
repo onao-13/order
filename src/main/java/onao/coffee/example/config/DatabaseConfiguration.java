@@ -11,15 +11,15 @@ import org.springframework.context.annotation.Configuration;
 public class DatabaseConfiguration {
 
     @Bean
-    void configure() {
+    Database configure() {
         DataSourceConfig sourceConfig = new DataSourceConfig();
         sourceConfig.setUsername("user");
         sourceConfig.setPassword("pass");
-        sourceConfig.setUrl("postgres://user:pass@postgres/test");
+        sourceConfig.setUrl("jdbc:postgresql://postgres:5432/test");
 
         DatabaseConfig config = new DatabaseConfig();
         config.setDataSourceConfig(sourceConfig);
 
-        Database database = DatabaseFactory.create(config);
+        return DatabaseFactory.create(config);
     }
 }

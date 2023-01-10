@@ -1,20 +1,5 @@
 server:
   port: 8083
-spring:
-  datasource:
-    url: jdbc:postgresql://postgres/test
-    driver-class-name: org.postgresql.Driver
-    username: user
-    password: pass
-  jpa:
-    database-platform: org.hibernate.dialect.H2Dialect
-    show-sql: true
-    defer-datasource-initialization: true
-  h2:
-    console:
-      enabled: true
-      settings:
-        trace: true
 ebean:
   ddl:
     generate: true
