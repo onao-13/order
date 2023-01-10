@@ -4,3 +4,9 @@ ebean:
   ddl:
     generate: true
     run: true
+datasource:
+  db:
+    username: user
+    password: pass
+    databaseUrl: jdbc:postgresql://postgres/test
+    databaseDriver: org.postgresql.Driver
